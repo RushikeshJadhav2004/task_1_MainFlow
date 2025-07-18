@@ -1,38 +1,73 @@
-.App {
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+.app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  padding: 2rem;
   min-height: 100vh;
+  background: radial-gradient(circle, #0f0f0f 40%, #1a0000 100%);
+}
+
+.app-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.app-logo {
+  height: 220px;
+  animation: spin 10s linear infinite;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px #ff0000aa);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff3333;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #ff0000aa;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.count {
+  color: #ff5555;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px #ff4444;
+}
+
+.refresh-button {
+  background-color: #ff1a1a;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
   color: white;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff1a1a;
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.refresh-button:hover {
+  background-color: #ff0000;
+  box-shadow: 0 0 25px #ff0000, 0 0 40px #ff3333;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
